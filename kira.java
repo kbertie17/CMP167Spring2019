@@ -1,31 +1,30 @@
-package week2;
 /*
- * Author: Kira Bertie
- * Created: 2/7/2019
- * Description: This program calculates the average of three given numbers. 
+ * Kira Bertie
+ * 3/7/19
+ * This program calculates the average.
  */
-
 import java.util.Scanner;
 
-
 public class kira {
-	
 	public static void main(String[] args) {
-		
 		Scanner scnr = new Scanner(System.in);
 		
-		double num1; 
-		double num2;
-		double num3;
-		double avg; 
+		double n;
+		double i = 1.0;
+		double sum = 0.0;
+		double avg;
 		
-		System.out.println("Input three numbers: ");
-		num1 = scnr.nextDouble();
-		num2 = scnr.nextDouble();
-		num3 = scnr.nextDouble();
-		avg = (num1 + num2 + num3) / 3;
-		System.out.println("The average is: " + avg); 
+		System.out.println("Enter the number of natural numbers: ");
+		n = scnr.nextDouble();
 		
+		while (i <= n) {
+			sum = sum + i;
+			i = i + 1;
+		}
+		
+		avg = sum / n;
+		
+		System.out.println("The average of" + n + " numbers is " + avg);
 	}
 
 }
