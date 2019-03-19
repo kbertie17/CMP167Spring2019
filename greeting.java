@@ -1,3 +1,9 @@
+/*
+Kira Bertie
+3/19/19
+This program asks the user for a name. 
+*/
+
 package aaaa;
 
 import java.util.Scanner;
