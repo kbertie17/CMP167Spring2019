@@ -34,6 +34,27 @@ public class human {
 		return total;
 	}
 	
+	public int getAge () {
+		return this.age;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	public void setName (String name) {
+		this.name = name;
+	}
+	
+	@Override
+	public String toString() {
+		return "Human:[ name" +getName() + ", age:" + getAge()+" , wealth: " + this.wealth+"$]";
+	}
+	
 	public void eat() {
 		if (food >= 4.5) {
 			hunger -= 1.0;
@@ -44,6 +65,10 @@ public class human {
 		else {
 			System.out.println("Not enough food, please buy more");
 		}
+	}
+	
+	public void eat(int food) {
+		hunger -= (int)(food/4.5);
 	}
 	
 	public void grow() {
